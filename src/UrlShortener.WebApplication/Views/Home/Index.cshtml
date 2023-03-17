@@ -2,8 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <h3>Hi {username}!</h3>
-    <p> Please check <a asp-area="" asp-controller="Home" asp-action="TechTaskDetails">Task Details</a> for more details.</p>
-</div>
+@model UrlShortener.WebApplication.Models.UrlViewModel
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.LongUrl)
+    @Html.ValidationMessageFor(model => model.LongUrl)
+    <button type="submit">Create</button>
+
+    @Html.TextBoxFor(model => model.ShortUrl, new { @readonly = "readonly" })
+}

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<UrlShortener.WebApplication.Models.UrlViewModel>
+
+<div class="text-center">
+    <h1 class="display-4">Your URLs</h1>
+
+    <table>
+    <tr>
+        <th>Long URL</th>
+        <th>Short URL</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.LongUrl</td>
+            <td>@item.ShortUrl</td>
+       </tr>
+    }
+    </table>     
+</div>
