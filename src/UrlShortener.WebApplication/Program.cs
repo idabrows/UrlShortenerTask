@@ -1,13 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using UrlShortener.Data;
 using UrlShortener.Domain.Repositories;
+using UrlShortener.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IUrlRepository, UrlRepository>();
-//builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("UrlShortenerDb"));
+builder.Services.AddDbContext<AppDbContext>(o => o.UseInMemoryDatabase("UrlShortenerDb"));
+builder.Services.AddScoped<IShortUrlRepository, ShortUrlRepository>();
+builder.Services.AddScoped<IShortUrlService, ShortUrlSevice>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +27,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 app.Run();

@@ -2,8 +2,7 @@ namespace UrlShortener.WebApplication.Models
 {
     public class UrlViewModel
     {
-        public int UrlId { get; set; }
-        public string LongUrl { get; set; }
-        public string ShortUrl { get; set; }
+        public string Destination { get; set; }
+        public string Path { get; set; }
     }
 }

@@ -6,10 +6,9 @@ namespace UrlShortener.Data
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
-            : base(options)
-        {
-        }
+            : base(options) {}
 
-        public DbSet<Url> Urls { get; set; }
+        public DbSet<ShortUrl> ShortUrls { get; set; }
+        public DbSet<RequestUrlLog> RequestUrlLogs { get; set; }
     }
 }
