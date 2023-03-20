@@ -1,14 +1,20 @@
 # UrlShortener
 
-Provide some details about your application 
+Basic version of Url Shortener application.
 
 ## How to start?
-`Section description:  What should be done before application start(e.g db migration)`
+I used In-memory database, so no migration is needed. Set UrlShortener.WebApplication as a startup project.
+
 ## Key assumptions 
-`Section description: If you have any assumption during your implementation, please provide them here.`
 
 ## Future Ideas
-`Section description:  If you haven't enough time to implement some feature or ideas, please provide them here.`
+-Add request logging (use some logger)
+-Add unit testing:
+	-for controller with mocked services
+	-for services with mocked repository
+	-for repository with mocked db
+-Add e2e tests for the whole solution
+-Add real database
 
 
 ## Task Description 
