@@ -1,5 +1,4 @@
 # UrlShortener
-
 Basic version of Url Shortener application.
 
 ## How to start?
@@ -8,13 +7,13 @@ I used In-memory database, so no migration is needed. Set UrlShortener.WebApplic
 ## Key assumptions 
 
 ## Future Ideas
--Add request logging (use some logger)
--Add unit testing:
-	-for controller with mocked services
-	-for services with mocked repository
-	-for repository with mocked db
--Add e2e tests for the whole solution
--Add real database
+- Add request logging (use some logger)
+- Add unit testing:
+	- for controller with mocked services
+	- for services with mocked repository
+	- for repository with mocked db	
+- Add e2e tests for the whole solution
+- Add real database
 
 
 ## Task Description 
